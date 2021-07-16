@@ -80,16 +80,12 @@ function App() {
           render={ props => currentUser ? <Profile {...props} currentUser= {currentUser} handleLogout= {handleLogout}/> : <Redirect to="/login" />}
         />
         <Route 
+
         exact path="/calendar" 
         render={ props => <CalendarView {...props} currentUser= {currentUser}/>} />
         
         <Route path="/calendar/weekview" 
-        render={props=> <WeekView {...props} currentUser={currentUser}/>} />
-
-        <Route
-
-        exact path="/calendar/day"
-        component={DayView} />
+        render={props => <WeekView {...props} currentUser={currentUser}/> }/>
 
         </Switch>  
       </div>

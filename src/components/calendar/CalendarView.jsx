@@ -56,8 +56,14 @@ export default function CalendarView(props) {
             <TabItem onClick={() => history.push("/calendar-month")}>
               Monthly
             </TabItem>
+<<<<<<< HEAD
             <TabItem>
             <StyledLink to="/calendar/weekview">Weekly</StyledLink>
+=======
+            <TabItem
+            style={{ backgroundColor: "white" }}>
+            <Link to="/calendar/weekview">Weekly</Link>
+>>>>>>> a0222d90f42422c58aa841e74e165d8fd46aeeac
             </TabItem>
             <TabItem
               style={{ backgroundColor: "white" }}
