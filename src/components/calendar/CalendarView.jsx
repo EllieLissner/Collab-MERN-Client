@@ -57,15 +57,15 @@ export default function CalendarView(props) {
               Monthly
             </TabItem>
             <TabItem>
-            <Link to="/calendar/weekview">Weekly</Link>
+            <StyledLink to="/calendar/weekview">Weekly</StyledLink>
             </TabItem>
             <TabItem
               style={{ backgroundColor: "white" }}
               // onClick={() => history.push(`/date/${format(new Date(), "d")}`)}
             >
-              <Link to="/calendar/day">
+              <StyledLink to="/calendar/day">
               Daily
-              </Link>
+              </StyledLink>
             </TabItem>
           </Tabs>
         </TabsWrapper>
@@ -106,6 +106,14 @@ export default function CalendarView(props) {
       </Wrapper>
     )
 }  
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: black;
+  &:hover {
+    text-decoration: underline;
+  }
+`
 const Wrapper = styled.div`
   min-height: 100vh;
   background-color: lavenderblush;
@@ -126,14 +134,13 @@ const Tabs = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 2px;
-  background-color: lightgrey;
+  background-color: white;
 `;
 
 const TabItem = styled.div`
 
   flex-grow: 1;
   text-align: center;
-  background-color: lightgrey;
   color: black;
   margin-bottom: 20px;
   padding: 20px 0;
