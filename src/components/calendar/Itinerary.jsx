@@ -19,7 +19,7 @@ export default function Itinerary() {
         }
         
         getDailyEvents()
-        console.log({eventData}, )
+        console.log(eventData )
     }, [])
 
 
