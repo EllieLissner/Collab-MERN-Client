@@ -26,7 +26,7 @@ export default function Itinerary() {
         return (
             <ListItem>
                 <RightArrow size="10"/> 
-                <div>{activity.start.time.hours}:{activity.start.time.minutes } { activity.title}</div>
+                {activity.start.time.hours}:{activity.start.time.minutes } { activity.title}
                 <br></br>
                 <br></br>
             </ListItem>
@@ -43,16 +43,14 @@ export default function Itinerary() {
     )
 }
 
-const div = styled.div`
-&:hover {
-    text-decoration: underline;
-}
-`
-
 const List = styled.div`
 `
 const ListItem = styled.div`
     padding: 5px 0px;
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
 `
 const Wrapper = styled.div`
     width: 190px;
@@ -61,4 +59,5 @@ const Wrapper = styled.div`
     margin: 5px 0px;
     padding: 10px 0px;
     }
+    
 `

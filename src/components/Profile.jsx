@@ -21,9 +21,6 @@ margin-top: 10px;
 .h5 {
   padding: 5px 0px;
 }
-&:hover {
-    text-decoration: underline;
-  }
 `
 const Arrows = styled.span`
 font-size: 10px;
