@@ -58,7 +58,7 @@ export default function CalendarView(props) {
             </TabItem>
             <TabItem
             style={{ backgroundColor: "white" }}>
-            <Link to="/calendar/weekview">Weekly</Link>
+            <StyledLink to="/calendar/weekview">Weekly</StyledLink>
             </TabItem>
             <TabItem
               style={{ backgroundColor: "white" }}
