@@ -3,8 +3,7 @@ import styled, { keyframes } from "styled-components";
 import axios from 'axios'
 import Cal from './Cal'
 import NewEvent from "./components/NewEvent"
-import WeekView from "./week/WeekView";
-import Itinerary from "./Itinerary";
+//import Itinerary from "./Itinerary";
 import { useHistory, Link } from "react-router-dom";
 
 import { format } from "date-fns";
@@ -64,7 +63,7 @@ export default function CalendarView(props) {
               style={{ backgroundColor: "white" }}
               // onClick={() => history.push(`/date/${format(new Date(), "d")}`)}
             >
-              <Link to="/calendar/day">
+              <Link to="/calendar/dayview">
               Daily
               </Link>
             </TabItem>

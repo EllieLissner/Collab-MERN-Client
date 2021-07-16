@@ -216,7 +216,7 @@ const submitEndDate = (event) => {
       ) : null}
           </form>
           <NewEventCalendar />
-          <EditTime />
+          <EditTime form={form} setForm={setForm}/>
         </div>
     )
 }

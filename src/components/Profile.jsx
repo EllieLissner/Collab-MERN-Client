@@ -6,7 +6,7 @@ import Login from './Login'
 //import CalendarView from './calendar/CalendarView'
 import Weather from './Weather'
 import styled from 'styled-components'
-import { RightArrow } from '@styled-icons/boxicons-regular/RightArrow'
+//import { RightArrow } from '@styled-icons/boxicons-regular/RightArrow'
 import { Calendar } from '@styled-icons/boxicons-regular/Calendar'
 import Itinerary from './calendar/Itinerary'
 

@@ -3,7 +3,7 @@ import { useHistory, useParams } from "react-router";
 import axios from 'axios'
 import styled from "styled-components";
 import NewEvent from "../components/NewEvent"
-//import DateSection from "./DateSection";
+import DateSection from "./DateSection";
 import NoEventToday from "./NoEventToday";
 import SingleEvent from "./SingleEvent"
 
@@ -12,11 +12,11 @@ export default function DayView() {
     const [status, setStatus] = useState("loading");
     const history = useHistory();
     const params = useParams();
-    // const today = new Date(
-    //   params.date.slice(0, 4),
-    //   params.date.slice(5, 7) - 1,
-    //   params.date.slice(8, 10)
-    // );
+    const today = new Date(
+      // params.date.slice(0, 4),
+      // params.date.slice(5, 7) - 1,
+      // params.date.slice(8, 10)
+    );
     useEffect(() => {
         setStatus("loading");
         //AXIOS GET ROUTE 
@@ -93,7 +93,7 @@ export default function DayView() {
         </TabItem>
         <TabItem>Day</TabItem>
       </Tabs>
-      {/* <DateSection today={today} /> */}
+      <DateSection today={today} />
       {status === "loading" ? null : (
         <ContentSection>
           {dayEvents.length === 0 ? (

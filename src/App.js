@@ -84,9 +84,11 @@ function App() {
         exact path="/calendar" 
         render={ props => <CalendarView {...props} currentUser= {currentUser}/>} />
         
-        <Route path="/calendar/weekview" 
+        <Route exact path="/calendar/weekview" 
         render={props => <WeekView {...props} currentUser={currentUser}/> }/>
 
+        <Route exact path="/calendar/dayview" 
+        render={props => <DayView {...props} currentUser={currentUser}/> }/>
         </Switch>  
       </div>
     </Router>
