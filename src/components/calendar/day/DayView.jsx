@@ -6,6 +6,40 @@ import NewEvent from "../components/NewEvent"
 //import DateSection from "./DateSection";
 import NoEventToday from "./NoEventToday";
 import SingleEvent from "./SingleEvent"
+// import Delete from '@styled-icons/feather/Delete'
+// import ReactScheduler as React from 'react';
+// import Paper from '@material-ui/core/Paper';
+// import { ViewState } from '@devexpress/dx-react-scheduler';
+// import {
+//   Scheduler,
+//   DayView,
+//   Appointments,
+// } from '@devexpress/dx-react-scheduler-material-ui';
+
+// const currentDate = '2018-11-01';
+// const schedulerData = [
+//   { startDate: '2018-11-01T09:45', endDate: '2018-11-01T11:00', title: 'Meeting' },
+//   { startDate: '2018-11-01T12:00', endDate: '2018-11-01T13:30', title: 'Go to a gym' },
+// ];
+
+// export default () => (
+//   <Paper>
+//     <Scheduler
+//       data={schedulerData}
+//     >
+//       <ViewState
+//         currentDate={currentDate}
+//       />
+//       <DayView
+//         startDayHour={9}
+//         endDayHour={14}
+//       />
+//       <Appointments />
+//     </Scheduler>
+//   </Paper>
+// );
+
+
 
 export default function DayView() {
     const [dayEvents, setDayEvents] = useState([]);
@@ -60,11 +94,14 @@ export default function DayView() {
     const eventList = eventData.map((activity, key) => {
 
       return (
+        <div className='dailyContainer'>
           <li>
               {activity.start.time.hours}:{activity.start.time.minutes } { activity.title}
               <br></br>
               <br></br>
           </li>
+        </div>
+          
       )
   })
 
@@ -93,6 +130,7 @@ export default function DayView() {
         </TabItem>
         <TabItem>Day</TabItem>
       </Tabs>
+      {eventList}
       {/* <DateSection today={today} /> */}
       {status === "loading" ? null : (
         <ContentSection>
